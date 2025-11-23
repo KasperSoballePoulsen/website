@@ -7,6 +7,7 @@ import Insights from './components/Home/Insights';
 import Stats from './components/Home/Stats';
 import About from './components/Home/About';
 import CallToAction from './components/Home/CallToAction';
+import MarketIntelligence from './components/AI/MarketIntelligence';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Hero />
         <Stats />
         <Sectors />
+        <MarketIntelligence />
         <Insights />
         <About />
         <CallToAction />
