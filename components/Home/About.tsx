@@ -7,7 +7,7 @@ const team = [
     name: 'Alexander Thomsen',
     role: 'Managing Partner',
     focus: 'Energy Trading & Commercial',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop',
+    image: '././public/Gemini_Generated_Image_pigdlzpigdlzpigd.png',
     bio: 'With over 15 years in energy markets, Alexander specializes in placing high-impact traders and originators across European power and gas desks. He founded PrimeTalent to bring a bespoke approach to front-office recruitment.'
   },
   {
