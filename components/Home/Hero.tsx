@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button';
 import ContactModal from '../UI/ContactModal';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Hero: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState<'client' | 'candidate'>('client');
+  const { t } = useLanguage();
 
   const openModal = (type: 'client' | 'candidate') => {
     setModalType(type);
@@ -54,13 +56,13 @@ const Hero: React.FC = () => {
             <div className="w-20 h-1 bg-blue-400 mb-8 animate-fade-in-up"></div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-white mb-8 leading-[1.1] animate-fade-in-up delay-100 tracking-tight">
-              Connecting Top <br />
-              Energy Talents <br />
-              <span className="text-blue-200">With the Future.</span>
+              {t('hero.title_line1')} <br />
+              {t('hero.title_line2')} <br />
+              <span className="text-blue-200">{t('hero.title_line3')}</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-200 font-light mb-12 max-w-2xl leading-relaxed animate-fade-in-up delay-200">
-              Whether you are a Trading House seeking quantitative edge or a Trader ready for your next desk, we invite you to start the conversation.
+              {t('hero.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-5 animate-fade-in-up delay-300">
@@ -68,13 +70,13 @@ const Hero: React.FC = () => {
                  onClick={() => openModal('client')}
                  className="px-8 py-4 bg-white text-prime-navy font-sans text-sm font-bold tracking-widest hover:bg-blue-50 transition-colors duration-300"
                >
-                 FOR TRADING HOUSES
+                 {t('hero.btn_client')}
                </button>
                <button 
                  onClick={() => openModal('candidate')}
                  className="px-8 py-4 bg-transparent border border-white text-white font-sans text-sm font-bold tracking-widest hover:bg-white hover:text-prime-navy transition-all duration-300"
                >
-                 FOR CANDIDATES
+                 {t('hero.btn_candidate')}
                </button>
             </div>
           </div>

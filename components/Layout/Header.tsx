@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search } from 'lucide-react';
-import { NavItem } from '../../types';
-
-const navItems: NavItem[] = [
-  { label: 'Expertise', href: '#expertise' },
-  { label: 'Market Insights', href: '#insights' },
-  { label: 'Candidates', href: '#candidates' },
-  { label: 'Clients', href: '#clients' },
-  { label: 'About Us', href: '#about' },
-];
+import { Menu, X, Search, Globe } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +15,14 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navItems = [
+    { label: t('nav.expertise'), href: '#expertise' },
+    { label: t('nav.insights'), href: '#insights' },
+    { label: t('nav.candidates'), href: '#candidates' },
+    { label: t('nav.clients'), href: '#clients' },
+    { label: t('nav.about'), href: '#about' },
+  ];
+
   // Dynamic classes based on scroll state
   const headerBg = isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-6';
   const navTextColor = isScrolled ? 'text-gray-800' : 'text-white/90';
@@ -29,6 +30,10 @@ const Header: React.FC = () => {
   const logoBoxClass = isScrolled ? 'bg-prime-navy text-white' : 'bg-white text-prime-navy';
   const brandTextClass = isScrolled ? 'text-prime-navy' : 'text-white';
   const iconClass = isScrolled ? 'text-prime-navy hover:text-blue-600' : 'text-white hover:text-blue-200';
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'da' : 'en');
+  };
 
   return (
     <header 
@@ -56,16 +61,29 @@ const Header: React.FC = () => {
               {item.label}
             </a>
           ))}
+          
+          {/* Language Switcher Desktop */}
+          <button 
+            onClick={toggleLanguage}
+            className={`flex items-center gap-1 text-xs font-bold uppercase tracking-widest border px-2 py-1 rounded transition-colors ${isScrolled ? 'border-gray-300 text-prime-navy hover:bg-gray-100' : 'border-white/30 text-white hover:bg-white/10'}`}
+          >
+            <span className={language === 'en' ? 'font-bold' : 'font-normal opacity-70'}>EN</span>
+            <span className="opacity-50">|</span>
+            <span className={language === 'da' ? 'font-bold' : 'font-normal opacity-70'}>DA</span>
+          </button>
         </nav>
 
         {/* Icons / Mobile Toggle */}
-        <div className="flex items-center gap-6">
-          <button aria-label="Search" className={`hidden lg:block transition-colors ${iconClass}`}>
-            <Search size={20} />
-          </button>
-          
+        <div className="flex items-center gap-4 lg:hidden">
           <button 
-            className={`lg:hidden z-50 ${isMobileMenuOpen ? 'text-prime-navy' : (isScrolled ? 'text-prime-navy' : 'text-white')}`}
+             onClick={toggleLanguage}
+             className={`text-xs font-bold uppercase tracking-widest mr-2 ${isScrolled ? 'text-prime-navy' : 'text-white'}`}
+          >
+            {language.toUpperCase()}
+          </button>
+
+          <button 
+            className={`z-50 ${isMobileMenuOpen ? 'text-prime-navy' : (isScrolled ? 'text-prime-navy' : 'text-white')}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,6 +104,12 @@ const Header: React.FC = () => {
               {item.label}
             </a>
           ))}
+          <button 
+            onClick={toggleLanguage}
+            className="mt-8 text-sm font-bold uppercase tracking-widest text-gray-500 border border-gray-200 px-6 py-3 rounded hover:bg-gray-50"
+          >
+            Switch to {language === 'en' ? 'Danish' : 'English'}
+          </button>
         </div>
       </div>
     </header>

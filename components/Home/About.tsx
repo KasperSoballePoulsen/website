@@ -1,48 +1,51 @@
 import React from 'react';
 import SectionHeading from '../UI/SectionHeading';
 import { Linkedin } from 'lucide-react';
-
-const team = [
-  {
-    name: 'Alexander Thomsen',
-    role: 'Managing Partner',
-    focus: 'Energy Trading & Commercial',
-    image: '././public/Gemini_Generated_Image_pigdlzpigdlzpigd.png',
-    bio: 'With over 15 years in energy markets, Alexander specializes in placing high-impact traders and originators across European power and gas desks. He founded PrimeTalent to bring a bespoke approach to front-office recruitment.'
-  },
-  {
-    name: 'Sarah Nielsen',
-    role: 'Partner',
-    focus: 'Quantitative Analytics',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop',
-    bio: 'Sarah bridges the gap between complex mathematics and recruitment. With a background in applied statistics, she identifies elite quants, data scientists, and structurers for the world’s leading trading houses.'
-  },
-  {
-    name: 'Mikkel Jensen',
-    role: 'Partner',
-    focus: 'Trading Technology',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop',
-    bio: 'Focused exclusively on the technological backbone of trading, Mikkel connects low-latency C++ and Python developers with firms building the high-performance systems of tomorrow.'
-  }
-];
+import { useLanguage } from '../../context/LanguageContext';
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
+
+  const team = [
+    {
+      name: 'Rasmus Mikkelsen',
+      role: t('about.team_rasmus_role'),
+      focus: t('about.team_rasmus_focus'),
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop',
+      bio: t('about.team_rasmus_bio')
+    },
+    {
+      name: 'Sarah Nielsen',
+      role: t('about.team_sarah_role'),
+      focus: t('about.team_sarah_focus'),
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop',
+      bio: t('about.team_sarah_bio')
+    },
+    {
+      name: 'Mikkel Jensen',
+      role: t('about.team_mikkel_role'),
+      focus: t('about.team_mikkel_focus'),
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop',
+      bio: t('about.team_mikkel_bio')
+    }
+  ];
+
   return (
     <section id="about" className="py-24 bg-white border-t border-gray-100">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-12">
            <div className="md:w-1/2">
              <SectionHeading 
-               category="Who We Are"
-               title="Based in Aarhus. Connected Globally."
+               category={t('about.category')}
+               title={t('about.title')}
              />
            </div>
            <div className="md:w-1/2 pt-4">
              <p className="text-xl font-light text-gray-600 leading-relaxed mb-6">
-               PrimeTalent is a boutique executive search firm headquartered in Aarhus, Denmark. We function as a strategic partner to a select group of energy trading houses and technology firms.
+               {t('about.p1')}
              </p>
              <p className="text-gray-500 font-light leading-relaxed">
-               We believe that in a market defined by volatility and speed, the only true competitive advantage is human capital. Our compact, dedicated team of three partners ensures that every search is handled with the utmost discretion, speed, and industry depth. We don't just fill roles; we build the desks that move the market.
+               {t('about.p2')}
              </p>
            </div>
         </div>

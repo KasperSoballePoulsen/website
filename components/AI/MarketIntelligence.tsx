@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { generateMarketInsight } from '../../services/geminiService';
 import Button from '../UI/Button';
 import { Sparkles, Loader2, ArrowRight } from 'lucide-react';
 import SectionHeading from '../UI/SectionHeading';
@@ -8,6 +9,19 @@ const MarketIntelligence: React.FC = () => {
   const [insight, setInsight] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  const handleGenerate = async () => {
+    if (!query.trim()) return;
+    setLoading(true);
+    setInsight(null);
+    try {
+      const result = await generateMarketInsight(query);
+      setInsight(result);
+    } catch (e) {
+      setInsight("We are currently experiencing high demand for our intelligence services. Please try again shortly.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section id="market-intelligence" className="py-24 bg-prime-navy text-white relative overflow-hidden">
@@ -43,6 +57,7 @@ const MarketIntelligence: React.FC = () => {
                   <div className="text-xs text-gray-400 font-light"></div>
                   <Button 
                     variant="secondary" 
+                    onClick={handleGenerate}
                     disabled={loading || !query.trim()}
                     className="flex items-center gap-2"
                   >

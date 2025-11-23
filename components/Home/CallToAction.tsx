@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button';
 import ContactModal from '../UI/ContactModal';
+import { useLanguage } from '../../context/LanguageContext';
 
 const CallToAction: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState<'client' | 'candidate'>('client');
+  const { t } = useLanguage();
 
   const openModal = (type: 'client' | 'candidate') => {
     setModalType(type);
@@ -23,9 +25,9 @@ const CallToAction: React.FC = () => {
               </div>
 
               <div className="relative z-10 max-w-3xl mx-auto">
-                <h2 className="text-3xl md:text-5xl font-serif mb-6">Partner with PrimeTalent</h2>
+                <h2 className="text-3xl md:text-5xl font-serif mb-6">{t('cta.title')}</h2>
                 <p className="text-lg md:text-xl text-gray-300 font-light mb-10 leading-relaxed">
-                  Whether you are a Trading House seeking quantitative edge or a Trader ready for your next desk, we invite you to start the conversation.
+                  {t('cta.desc')}
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                    <Button 
@@ -33,14 +35,14 @@ const CallToAction: React.FC = () => {
                     className="px-10 py-4 text-base"
                     onClick={() => openModal('client')}
                    >
-                     For Trading Houses
+                     {t('cta.btn_client')}
                    </Button>
                    <Button 
                     variant="outline" 
                     className="px-10 py-4 text-base border-white text-white hover:bg-white hover:text-prime-navy"
                     onClick={() => openModal('candidate')}
                    >
-                     For Candidates
+                     {t('cta.btn_candidate')}
                    </Button>
                 </div>
               </div>

@@ -1,22 +1,40 @@
 import React from 'react';
 import SectionHeading from '../UI/SectionHeading';
 import { TrendingUp, BarChart3, Code2 } from 'lucide-react';
-
-const sectors = [
-  { id: 1, title: 'Traders', icon: TrendingUp, desc: 'Power, Gas, LNG, and Oil traders. Originators and Portfolio Managers driving commercial performance.' },
-  { id: 2, title: 'Quantitative Analytics', icon: BarChart3, desc: 'Quantitative Researchers, Data Scientists, and Structurers building the models of tomorrow.' },
-  { id: 3, title: 'Trading Technology', icon: Code2, desc: 'Python/C++ Developers, Algo Engineers, and CTRM Specialists architecting high-performance systems.' },
-];
+import { useLanguage } from '../../context/LanguageContext';
 
 const Sectors: React.FC = () => {
+  const { t } = useLanguage();
+
+  const sectors = [
+    { 
+      id: 1, 
+      title: t('sectors.traders_title'), 
+      icon: TrendingUp, 
+      desc: t('sectors.traders_desc')
+    },
+    { 
+      id: 2, 
+      title: t('sectors.quant_title'), 
+      icon: BarChart3, 
+      desc: t('sectors.quant_desc')
+    },
+    { 
+      id: 3, 
+      title: t('sectors.tech_title'), 
+      icon: Code2, 
+      desc: t('sectors.tech_desc')
+    },
+  ];
+
   return (
     <section id="expertise" className="py-24 bg-white">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
            <SectionHeading 
-             category="Our Expertise"
-             title="Specialized Practice Areas"
-             description="Deep vertical knowledge across the core pillars of the energy trade."
+             category={t('sectors.category')}
+             title={t('sectors.title')}
+             description={t('sectors.desc')}
            />
         </div>
 
