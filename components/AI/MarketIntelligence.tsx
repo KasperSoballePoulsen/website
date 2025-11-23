@@ -34,9 +34,9 @@ const MarketIntelligence: React.FC = () => {
           {/* Left Column: Intro */}
           <div>
             <SectionHeading 
-              category="PrimeTalent AI"
+              category="PrimeTalent Intelligence"
               title="Trading Market Intelligence"
-              description="Leverage our proprietary AI models to get instant, data-backed insights on compensation, hiring trends, and skill demand in energy trading."
+              description="Get instant, data-backed insights on compensation, hiring trends, and skill demand in energy trading."
               light
             />
             
@@ -54,7 +54,7 @@ const MarketIntelligence: React.FC = () => {
                   className="w-full bg-transparent border-b border-gray-500 py-3 text-lg focus:outline-none focus:border-white placeholder-gray-600 transition-colors"
                 />
                 <div className="flex items-center justify-between mt-4">
-                  <div className="text-xs text-gray-400 font-light">Powered by Gemini 2.5 Flash</div>
+                  <div className="text-xs text-gray-400 font-light"></div>
                   <Button 
                     variant="secondary" 
                     onClick={handleGenerate}
@@ -92,7 +92,7 @@ const MarketIntelligence: React.FC = () => {
              {insight && (
                <div className="animate-fade-in">
                  <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-4">
-                    <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 uppercase tracking-wider">Generated Report</span>
+                    <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 uppercase tracking-wider">Report</span>
                     <span className="text-xs text-gray-400 ml-auto">{new Date().toLocaleDateString()}</span>
                  </div>
                  <div className="prose prose-lg prose-indigo font-serif text-gray-800 whitespace-pre-line leading-relaxed">
