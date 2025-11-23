@@ -4,7 +4,6 @@ import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Hero from './components/Home/Hero';
 import Sectors from './components/Home/Sectors';
-import Insights from './components/Home/Insights';
 import Stats from './components/Home/Stats';
 import About from './components/Home/About';
 import CallToAction from './components/Home/CallToAction';
@@ -18,7 +17,6 @@ function App() {
           <Hero />
           <Stats />
           <Sectors />
-          <Insights />
           <About />
           <CallToAction />
         </main>
