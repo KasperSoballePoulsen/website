@@ -74,11 +74,11 @@ const translations: Record<Language, Record<string, any>> = {
       btn_candidate: 'For Candidates'
     },
     footer: {
-      desc: 'Connecting visionary organizations with the executive leadership needed to shape the future.',
+      desc: 'Identifying top performers and placing them where they create impact.',
       services: 'Services',
       industries: 'Industries',
       stay_informed: 'Stay Informed',
-      subscribe: 'Subscribe to our market intelligence.',
+      subscribe: 'Subscribe to our newsletter.',
       rights: 'PrimeTalent Global. All rights reserved.',
       privacy: 'Privacy Policy',
       terms: 'Terms of Use',
@@ -169,11 +169,11 @@ const translations: Record<Language, Record<string, any>> = {
       btn_candidate: 'For Kandidater'
     },
     footer: {
-      desc: 'Forbinder visionære organisationer med det lederskab, der skal til for at forme fremtiden.',
+      desc: 'Vi identificerer top-performere og placerer dem dér, hvor de skaber mest impact.',
       services: 'Ydelser',
       industries: 'Industrier',
       stay_informed: 'Hold Dig Opdateret',
-      subscribe: 'Tilmeld dig vores markedsindsigt.',
+      subscribe: 'Tilmeld dig vores nyhedsbrev.',
       rights: 'PrimeTalent Global. Alle rettigheder forbeholdes.',
       privacy: 'Privatlivspolitik',
       terms: 'Brugervilkår',

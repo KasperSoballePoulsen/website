@@ -1,17 +1,17 @@
 import React from 'react';
-import { Linkedin, Twitter, Facebook, ArrowUpRight } from 'lucide-react';
+import { Linkedin, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 
 const Footer: React.FC = () => {
   const { t, language } = useLanguage();
 
   const servicesList = language === 'en' 
-    ? ['Executive Search', 'Board Advisory', 'Interim Management', 'Leadership Assessment']
-    : ['Executive Search', 'Bestyrelsesrådgivning', 'Interim Management', 'Ledelsesvurdering'];
+    ? ['Recruitment', 'Headhunting']
+    : ['Rekruttering', 'Headhunting'];
 
   const industriesList = language === 'en'
-    ? ['Financial Services', 'Technology & Digital', 'Industrial', 'Consumer & Retail']
-    : ['Finansielle Tjenester', 'Teknologi & Digital', 'Industriel', 'Forbruger & Detail'];
+    ? ['Energy']
+    : ['Energi'];
 
   return (
     <footer className="bg-prime-navy text-white pt-20 pb-10">
@@ -28,8 +28,6 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-white hover:text-blue-400 transition"><Linkedin size={20} /></a>
-              <a href="#" className="text-white hover:text-blue-400 transition"><Twitter size={20} /></a>
-              <a href="#" className="text-white hover:text-blue-400 transition"><Facebook size={20} /></a>
             </div>
           </div>
 
@@ -38,7 +36,7 @@ const Footer: React.FC = () => {
             <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-gray-400">{t('footer.services')}</h4>
             <ul className="space-y-4 text-sm font-light">
               {servicesList.map((item, i) => (
-                <li key={i}><a href="#" className="hover:underline">{item}</a></li>
+                <li key={i}>{item}</li>
               ))}
             </ul>
           </div>
@@ -48,7 +46,7 @@ const Footer: React.FC = () => {
             <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-gray-400">{t('footer.industries')}</h4>
             <ul className="space-y-4 text-sm font-light">
               {industriesList.map((item, i) => (
-                <li key={i}><a href="#" className="hover:underline">{item}</a></li>
+                <li key={i}>{item}</li>
               ))}
             </ul>
           </div>
