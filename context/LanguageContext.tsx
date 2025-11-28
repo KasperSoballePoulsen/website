@@ -77,14 +77,10 @@ const translations: Record<Language, Record<string, any>> = {
       desc: 'Identifying top performers and placing them where they create impact.',
       services: 'Services',
       industries: 'Industries',
+      contact_info: 'Contact',
       stay_informed: 'Stay Informed',
       subscribe: 'Subscribe to our newsletter.',
       rights: 'PrimeTalent Global. All rights reserved.',
-      privacy: 'Privacy Policy',
-      terms: 'Terms of Use',
-      cookies: 'Cookie Policy',
-      services_list: ['Executive Search', 'Board Advisory', 'Interim Management', 'Leadership Assessment'],
-      industries_list: ['Financial Services', 'Technology & Digital', 'Industrial', 'Consumer & Retail']
     },
     modal: {
       client_title: 'Partner with PrimeTalent',
@@ -172,14 +168,10 @@ const translations: Record<Language, Record<string, any>> = {
       desc: 'Vi identificerer top-performere og placerer dem dér, hvor de skaber mest impact.',
       services: 'Ydelser',
       industries: 'Industrier',
+      contact_info: 'Kontakt',
       stay_informed: 'Hold Dig Opdateret',
       subscribe: 'Tilmeld dig vores nyhedsbrev.',
       rights: 'PrimeTalent Global. Alle rettigheder forbeholdes.',
-      privacy: 'Privatlivspolitik',
-      terms: 'Brugervilkår',
-      cookies: 'Cookiepolitik',
-      services_list: ['Executive Search', 'Bestyrelsesrådgivning', 'Interim Management', 'Ledelsesvurdering'],
-      industries_list: ['Finansielle Tjenester', 'Teknologi & Digital', 'Industriel', 'Forbruger & Detail']
     },
     modal: {
       client_title: 'Samarbejd med PrimeTalent',
@@ -202,7 +194,7 @@ const translations: Record<Language, Record<string, any>> = {
 };
 
 const getNested = (obj: any, path: string) => {
-    return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+  return path.split('.').reduce((acc, part) => acc && acc[part], obj);
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

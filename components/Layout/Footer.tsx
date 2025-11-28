@@ -6,17 +6,21 @@ const Footer: React.FC = () => {
   const { t, language } = useLanguage();
 
   const servicesList = language === 'en' 
-    ? ['Recruitment', 'Headhunting']
-    : ['Rekruttering', 'Headhunting'];
+    ? ['Recruitment', 'Headhunting', 'Executive Search', 'Interim Solutions']
+    : ['Rekruttering', 'Headhunting', 'Executive Search', 'Interim-løsninger'];
 
   const industriesList = language === 'en'
-    ? ['Energy']
-    : ['Energi'];
+    ? ['Energy Trading', 'Energy Analytics', 'Trading Technology']
+    : ['Energi Trading', 'Energi Analyse', 'Trading Teknologi'];
+
+  const contactInfoList = language === 'en' 
+    ? ['info@primeTalent.dk', '+45 22 63 63 10', 'Telefonsmøgen 3, 1st Floor\n8000 Aarhus C, Denmark']
+    : ['info@primeTalent.dk', '+45 22 63 63 10', 'Telefonsmøgen 3, 1 TV\n8000 Aarhus C, Danmark'];
 
   return (
     <footer className="bg-prime-navy text-white pt-20 pb-10">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
           
           {/* Brand */}
           <div className="md:col-span-1">
@@ -50,11 +54,20 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
+          {/* Links 3 */}
+          <div>
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-gray-400">{t('footer.contact_info')}</h4>
+            <ul className="space-y-4 text-sm font-light">
+              {contactInfoList.map((item, i) => (
+                <li className="whitespace-pre-line" key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
 
           {/* Newsletter */}
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-gray-400">{t('footer.stay_informed')}</h4>
-            <p className="text-gray-400 text-sm mb-4 font-light">{t('footer.subscribe')}</p>
+            <p className="space-y-4 text-sm mb-4 font-light">{t('footer.subscribe')}</p>
             <div className="flex border-b border-gray-600 py-2">
               <input 
                 type="email" 
@@ -70,11 +83,6 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-light">
           <p>&copy; {new Date().getFullYear()} {t('footer.rights')}</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">{t('footer.privacy')}</a>
-            <a href="#" className="hover:text-white">{t('footer.terms')}</a>
-            <a href="#" className="hover:text-white">{t('footer.cookies')}</a>
-          </div>
         </div>
       </div>
     </footer>
