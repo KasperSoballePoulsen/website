@@ -11,21 +11,21 @@ const About: React.FC = () => {
       name: 'Rasmus Mikkelsen',
       role: t('about.team_rasmus_role'),
       focus: t('about.team_rasmus_focus'),
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop',
+      image: 'RasmusProfilePic.jpg',
       bio: t('about.team_rasmus_bio')
     },
     {
-      name: 'Sarah Nielsen',
+      name: 'Malthe Boel',
       role: t('about.team_sarah_role'),
       focus: t('about.team_sarah_focus'),
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop',
+      image: 'MaltheProfilePic.jpg',
       bio: t('about.team_sarah_bio')
     },
     {
-      name: 'Mikkel Jensen',
+      name: 'Kasper Poulsen',
       role: t('about.team_mikkel_role'),
       focus: t('about.team_mikkel_focus'),
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop',
+      image: 'KasperProfilePic.jpg',
       bio: t('about.team_mikkel_bio')
     }
   ];
