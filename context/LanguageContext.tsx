@@ -34,11 +34,11 @@ const translations: Record<Language, Record<string, any>> = {
       category: 'Our Expertise',
       title: 'Specialized Practice Areas',
       desc: 'Deep vertical knowledge across the core pillars of the energy trade.',
-      traders_title: 'Traders',
+      traders_title: 'Energy Traders',
       traders_desc: 'Power, Gas, LNG, and Oil traders. Originators and Portfolio Managers driving commercial performance.',
-      quant_title: 'Quantitative Analytics',
+      quant_title: 'Trading Analysts',
       quant_desc: 'Quantitative Researchers, Data Scientists, and Structurers building the models of tomorrow.',
-      tech_title: 'Trading Technology',
+      tech_title: 'Software Developers',
       tech_desc: 'Python/C++ Developers, Algo Engineers, and CTRM Specialists architecting high-performance systems.'
     },
     insights: {
@@ -102,17 +102,17 @@ const translations: Record<Language, Record<string, any>> = {
   },
   da: {
     nav: {
-      expertise: 'Ekspertise',
+      expertise: 'Fokusområder',
       insights: 'Indsigter',
       candidates: 'Kandidater',
       clients: 'Klienter',
       about: 'Om Os'
     },
     hero: {
-      title_line1: 'Forbinder Top',
-      title_line2: 'Energi Talenter',
-      title_line3: 'Med Fremtiden.',
-      subtitle: 'Uanset om du er et handelshus der søger en kvantitativ fordel, eller en trader klar til dit næste bord, inviterer vi dig til at starte samtalen.',
+      title_line1: 'Vi Forbinder',
+      title_line2: 'Energitalenter',
+      title_line3: 'Med Fremtiden',
+      subtitle: 'Vi forbinder energihandelsvirksomheder med kandidater, der bidrager til bedre beslutninger og stærkere resultater.',
       btn_client: 'FOR HANDELSHUSE',
       btn_candidate: 'FOR KANDIDATER'
     },
@@ -122,15 +122,15 @@ const translations: Record<Language, Record<string, any>> = {
       network: 'Talentnetværk'
     },
     sectors: {
-      category: 'Vores Ekspertise',
-      title: 'Specialiserede Fagområder',
-      desc: 'Dyb vertikal viden på tværs af energihandelens kernesøjler.',
-      traders_title: 'Traders',
-      traders_desc: 'Power, Gas, LNG og Olie tradere. Originators og Portfolio Managers der driver kommerciel performance.',
-      quant_title: 'Kvantitativ Analyse',
-      quant_desc: 'Quantitative Researchers, Data Scientists og Structurers der bygger fremtidens modeller.',
-      tech_title: 'Handelsteknologi',
-      tech_desc: 'Python/C++ Udviklere, Algo Engineers og CTRM Specialister der arkitekterer højtydende systemer.'
+      category: 'Vores fokusområder',
+      title: 'Rekruttering og headhunting',
+      desc: 'Specialiseret rekruttering og headhunting inden for energihandelens centrale funktioner.',
+      traders_title: 'Energi-tradere',
+      traders_desc: 'Profiler der skaber værdi gennem handel i energimarkederne.',
+      quant_title: 'Trading-analytikere',
+      quant_desc: 'Analytiske profiler, der understøtter trading og styrker beslutningsgrundlaget.',
+      tech_title: 'Softwareudviklere',
+      tech_desc: 'Tekniske profiler med erfaring i systemer, der understøtter energi-trading.'
     },
     insights: {
       category: 'Perspektiver',
@@ -146,8 +146,8 @@ const translations: Record<Language, Record<string, any>> = {
     about: {
       category: 'Hvem Vi Er',
       title: 'Baseret i Aarhus. Forbundet Globalt.',
-      p1: 'PrimeTalent er et boutique executive search firma med hovedkvarter i Aarhus. Vi fungerer som strategisk partner for en udvalgt gruppe af energihandelshuse og teknologivirksomheder.',
-      p2: 'Vi tror på, at i et marked defineret af volatilitet og hastighed, er den eneste sande konkurrencefordel menneskelig kapital. Vores kompakte, dedikerede team af tre partnere sikrer, at hver søgning håndteres med største diskretion, hastighed og industrindsigt. Vi besætter ikke bare roller; vi bygger de teams, der flytter markedet.',
+      p1: 'PrimeTalent er et rekrutterings- og headhuntingfirma med base i Aarhus, specialiseret i energisektoren. Vi samarbejder med energihandelsvirksomheder om at identificere og rekruttere de rette profiler til både nøgle- og specialistroller.',
+      p2: 'I et marked præget af høj kompleksitet, volatilitet og hurtige beslutninger er adgang til de rette kompetencer afgørende. Vi arbejder tæt med både virksomheder og kandidater og håndterer hver rekruttering med høj faglighed, diskretion og dyb brancheindsigt. Vores fokus er ikke kun at besætte stillinger, men at sikre match, der skaber langsigtet værdi for begge parter.',
       team_rasmus_role: 'Partner',
       team_rasmus_focus: 'Energy Trading & Commercial',
       team_rasmus_bio: 'Med over 15 år i energimarkederne har Rasmus specialiseret sig i at placere high-impact tradere og originators på tværs af europæiske el- og gasborde. Han grundlagde PrimeTalent for at bringe en skræddersyet tilgang til front-office rekruttering.',
@@ -160,7 +160,7 @@ const translations: Record<Language, Record<string, any>> = {
     },
     cta: {
       title: 'Samarbejd med PrimeTalent',
-      desc: 'Uanset om du er et handelshus der søger en kvantitativ fordel, eller en trader klar til dit næste bord, inviterer vi dig til at starte samtalen.',
+      desc: 'Uanset om I er en energihandelsvirksomhed med behov for nye kompetencer, eller en kandidat med ambitioner inden for energihandel, inviterer vi jer til dialog.',
       btn_client: 'For Handelshuse',
       btn_candidate: 'For Kandidater'
     },

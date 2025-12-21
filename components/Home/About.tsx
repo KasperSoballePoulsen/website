@@ -65,10 +65,10 @@ const About: React.FC = () => {
                 <h3 className="text-3xl font-serif text-prime-navy mb-2">{member.name}</h3>
                 <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">{member.role}</p>
                 <div className="w-8 h-0.5 bg-gray-200 mb-4"></div>
-                <p className="text-sm font-bold text-prime-navy mb-2">Focus: {member.focus}</p>
+                {/*<p className="text-sm font-bold text-prime-navy mb-2">Focus: {member.focus}</p>
                 <p className="text-gray-500 font-light text-sm leading-relaxed mb-6">
                   {member.bio}
-                </p>
+                </p> */}
                 <a href="#" className="inline-flex items-center text-gray-400 hover:text-blue-600 transition-colors">
                   <Linkedin size={20} />
                 </a>
