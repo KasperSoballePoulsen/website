@@ -10,23 +10,23 @@ const About: React.FC = () => {
     {
       name: 'Rasmus Mikkelsen',
       role: t('about.team_rasmus_role'),
-      focus: t('about.team_rasmus_focus'),
+      email: t('about.team_rasmus_email'),
       image: 'RasmusProfilePic.jpg',
-      bio: t('about.team_rasmus_bio')
+      phone: t('about.team_rasmus_phone')
     },
     {
       name: 'Malthe Boel',
-      role: t('about.team_sarah_role'),
-      focus: t('about.team_sarah_focus'),
+      role: t('about.team_malthe_role'),
+      email: t('about.team_malthe_email'),
       image: 'MaltheProfilePic.jpg',
-      bio: t('about.team_sarah_bio')
+      phone: t('about.team_malthe_phone')
     },
     {
       name: 'Kasper Poulsen',
-      role: t('about.team_mikkel_role'),
-      focus: t('about.team_mikkel_focus'),
+      role: t('about.team_kasper_role'),
+      email: t('about.team_kasper_email'),
       image: 'KasperProfilePic.jpg',
-      bio: t('about.team_mikkel_bio')
+      phone: t('about.team_kasper_phone')
     }
   ];
 
@@ -65,8 +65,9 @@ const About: React.FC = () => {
                 <h3 className="text-3xl font-serif text-prime-navy mb-2">{member.name}</h3>
                 <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">{member.role}</p>
                 <div className="w-8 h-0.5 bg-gray-200 mb-4"></div>
-                {/*<p className="text-sm font-bold text-prime-navy mb-2">Focus: {member.focus}</p>
-                <p className="text-gray-500 font-light text-sm leading-relaxed mb-6">
+                <p className="text-sm font-bold text-prime-navy mb-2">{member.email}</p>
+                <p className="text-sm font-bold text-prime-navy mb-2">{member.phone}</p>
+                {/* <p className="text-gray-500 font-light text-sm leading-relaxed mb-6">
                   {member.bio}
                 </p> */}
                 <a href="#" className="inline-flex items-center text-gray-400 hover:text-blue-600 transition-colors">

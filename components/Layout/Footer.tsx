@@ -10,12 +10,12 @@ const Footer: React.FC = () => {
     : ['Rekruttering', 'Headhunting', 'Executive Search', 'Interim-løsninger'];
 
   const industriesList = language === 'en'
-    ? ['Energy Trading', 'Energy Analytics', 'Trading Technology']
-    : ['Energi Trading', 'Energi Analyse', 'Trading Teknologi'];
+    ? ['Energy Trading', 'Trading Analytics', 'Trading Technology']
+    : ['Energi Trading', 'Trading Analyse', 'Trading Teknologi'];
 
   const contactInfoList = language === 'en' 
-    ? ['info@primeTalent.dk', '+45 22 63 63 10', 'Telefonsmøgen 3, 1st Floor\n8000 Aarhus C, Denmark']
-    : ['info@primeTalent.dk', '+45 22 63 63 10', 'Telefonsmøgen 3, 1 TV\n8000 Aarhus C, Danmark'];
+    ? ['info@primetalent.dk', 'Telefonsmøgen 3, 1st Floor\n8000 Aarhus C, Denmark', 'CVR: 12345678']
+    : ['info@primetalent.dk', 'Telefonsmøgen 3, 1 TV\n8000 Aarhus C, Danmark', 'CVR: 12345678'];
 
   return (
     <footer className="bg-prime-navy text-white pt-20 pb-10">

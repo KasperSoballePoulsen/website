@@ -58,14 +58,14 @@ const translations: Record<Language, Record<string, any>> = {
       p1: 'PrimeTalent is a boutique executive search firm headquartered in Aarhus, Denmark. We function as a strategic partner to a select group of energy trading houses and technology firms.',
       p2: 'We believe that in a market defined by volatility and speed, the only true competitive advantage is human capital. Our compact, dedicated team of three partners ensures that every search is handled with the utmost discretion, speed, and industry depth. We don\'t just fill roles; we build the desks that move the market.',
       team_rasmus_role: 'Partner',
-      team_rasmus_focus: 'Energy Trading & Commercial',
-      team_rasmus_bio: 'With over 15 years in energy markets, Rasmus specializes in placing high-impact traders and originators across European power and gas desks. He founded PrimeTalent to bring a bespoke approach to front-office recruitment.',
-      team_sarah_role: 'Partner',
-      team_sarah_focus: 'Quantitative Analytics',
-      team_sarah_bio: 'Sarah bridges the gap between complex mathematics and recruitment. With a background in applied statistics, she identifies elite quants, data scientists, and structurers for the world’s leading trading houses.',
-      team_mikkel_role: 'Partner',
-      team_mikkel_focus: 'Trading Technology',
-      team_mikkel_bio: 'Focused exclusively on the technological backbone of trading, Mikkel connects low-latency C++ and Python developers with firms building the high-performance systems of tomorrow.'
+      team_rasmus_email: 'Email: rm@primetalent.dk',
+      team_rasmus_phone: 'Phone: +45 26 22 21 89',
+      team_malthe_role: 'Partner',
+      team_malthe_email: 'Email: mb@primetalent.dk',
+      team_malthe_phone: 'Phone: +45 40 97 77 88',
+      team_kasper_role: 'Partner',
+      team_kasper_email: 'Email: kp@primetalent.dk',
+      team_kasper_phone: 'Phone: +45 22 63 63 10'
     },
     cta: {
       title: 'Partner with PrimeTalent',
@@ -109,9 +109,9 @@ const translations: Record<Language, Record<string, any>> = {
       about: 'Om Os'
     },
     hero: {
-      title_line1: 'Vi Forbinder',
-      title_line2: 'Energitalenter',
-      title_line3: 'Med Fremtiden',
+      title_line1: 'Vi forbinder',
+      title_line2: 'energi-talenter',
+      title_line3: 'med fremtiden',
       subtitle: 'Vi forbinder energihandelsvirksomheder med kandidater, der bidrager til bedre beslutninger og stærkere resultater.',
       btn_client: 'FOR HANDELSHUSE',
       btn_candidate: 'FOR KANDIDATER'
@@ -149,14 +149,14 @@ const translations: Record<Language, Record<string, any>> = {
       p1: 'PrimeTalent er et rekrutterings- og headhuntingfirma med base i Aarhus, specialiseret i energisektoren. Vi samarbejder med energihandelsvirksomheder om at identificere og rekruttere de rette profiler til både nøgle- og specialistroller.',
       p2: 'I et marked præget af høj kompleksitet, volatilitet og hurtige beslutninger er adgang til de rette kompetencer afgørende. Vi arbejder tæt med både virksomheder og kandidater og håndterer hver rekruttering med høj faglighed, diskretion og dyb brancheindsigt. Vores fokus er ikke kun at besætte stillinger, men at sikre match, der skaber langsigtet værdi for begge parter.',
       team_rasmus_role: 'Partner',
-      team_rasmus_focus: 'Energy Trading & Commercial',
-      team_rasmus_bio: 'Med over 15 år i energimarkederne har Rasmus specialiseret sig i at placere high-impact tradere og originators på tværs af europæiske el- og gasborde. Han grundlagde PrimeTalent for at bringe en skræddersyet tilgang til front-office rekruttering.',
-      team_sarah_role: 'Partner',
-      team_sarah_focus: 'Kvantitativ Analyse',
-      team_sarah_bio: 'Sarah bygger bro mellem kompleks matematik og rekruttering. Med en baggrund i anvendt statistik identificerer hun elite quants, data scientists og structurers for verdens førende handelshuse.',
-      team_mikkel_role: 'Partner',
-      team_mikkel_focus: 'Handelsteknologi',
-      team_mikkel_bio: 'Fokuseret udelukkende på handelens teknologiske rygrad forbinder Mikkel low-latency C++ og Python udviklere med firmaer, der bygger fremtidens højtydende systemer.'
+      team_rasmus_email: 'Email: rm@primetalent.dk',
+      team_rasmus_phone: 'Mobil: +45 26 22 21 89',
+      team_malthe_role: 'Partner',
+      team_malthe_email: 'Email: mb@primetalent.dk',
+      team_malthe_phone: 'Mobil: +45 40 97 77 88',
+      team_kasper_role: 'Partner',
+      team_kasper_email: 'Email: kp@primetalent.dk',
+      team_kasper_phone: 'Mobil: +45 22 63 63 10'
     },
     cta: {
       title: 'Samarbejd med PrimeTalent',
