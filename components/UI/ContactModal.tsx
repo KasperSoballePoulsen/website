@@ -62,6 +62,11 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, type }) =>
                 <input required type="email" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. j.doe@firm.com" />
               </div>
 
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.phone')}</label>
+                <input required type="tel" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. +45 12 34 56 78" />
+              </div>
+
               {type === 'client' && (
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.company')}</label>
