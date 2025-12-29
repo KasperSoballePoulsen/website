@@ -16,15 +16,76 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, type }) =>
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  type ClientContactForm = {
+    fullName: string;
+    email: string;
+    phone: string | null;
+    company: string;
+    message: string;
+  };
+
+  type CandidateContactForm = {
+    fullName: string;
+    email: string;
+    phone: string | null;
+    linkedInUrl: string | null;
+    message: string;
+  };
+
+  function toNullIfBlank(v: FormDataEntryValue | null): string | null {
+    const s = String(v ?? "").trim();
+    return s.length ? s : null;
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate API call
-    setTimeout(() => {
+
+    try {
+      const formEl = e.currentTarget;
+      const fd = new FormData(formEl);
+
+      const base = {
+        fullName: String(fd.get("fullName") ?? "").trim(),
+        email: String(fd.get("email") ?? "").trim(),
+        phone: toNullIfBlank(fd.get("phone")),
+        message: String(fd.get("message") ?? "").trim(),
+      };
+
+      const url =
+        type === "client" ? "/api/contact-form/client" : "/api/contact-form/candidate";
+
+      const payload: ClientContactForm | CandidateContactForm =
+        type === "client"
+          ? {
+            ...base,
+            company: String(fd.get("company") ?? "").trim(),
+          }
+          : {
+            ...base,
+            linkedInUrl: toNullIfBlank(fd.get("linkedInUrl")),
+          };
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(`Request failed: ${res.status} ${text}`);
+      }
+
+      setStep("success");
+      formEl.reset();
+    } catch (err) {
+      console.error(err);
+    } finally {
       setLoading(false);
-      setStep('success');
-    }, 1500);
+    }
   };
+
 
   const title = type === 'client' ? t('modal.client_title') : t('modal.candidate_title');
   const subtitle = type === 'client' ? t('modal.client_subtitle') : t('modal.candidate_subtitle');
@@ -32,14 +93,14 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, type }) =>
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-prime-navy/80 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       ></div>
 
       {/* Modal Content */}
       <div className="relative bg-white w-full max-w-lg shadow-2xl animate-fade-in flex flex-col max-h-[90vh] overflow-y-auto">
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-prime-navy transition-colors"
         >
@@ -54,38 +115,39 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, type }) =>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.name')}</label>
-                <input required type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. Jonathan Doe" />
+                <input required name="fullName" type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. Jonathan Doe" />
               </div>
-              
+
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.email')}</label>
-                <input required type="email" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. j.doe@firm.com" />
+                <input required name="email" type="email" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. j.doe@firm.com" />
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.phone')}</label>
-                <input type="tel" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. +45 12 34 56 78" />
+                <input name="phone" type="tel" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. +45 12 34 56 78" />
               </div>
 
               {type === 'client' && (
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.company')}</label>
-                  <input required type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. Global Energy Trading" />
+                  <input required name="company" type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. Global Energy Trading" />
                 </div>
               )}
 
               {type === 'candidate' && (
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.linkedin')}</label>
-                  <input type="url" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="https://linkedin.com/in/..." />
+                  <input name="linkedInUrl" type="url" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="https://linkedin.com/in/..." />
                 </div>
               )}
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.message')}</label>
-                <textarea 
-                  required 
-                  rows={3} 
+                <textarea
+                  required
+                  name="message"
+                  rows={3}
                   className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400 resize-none"
                   placeholder={type === 'client' ? "We are looking for a Senior Power Trader..." : "I am an Algo Dev with 5 years exp..."}
                 ></textarea>
