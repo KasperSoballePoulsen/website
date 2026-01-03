@@ -98,8 +98,8 @@ const translations: Record<Language, Record<string, any>> = {
       send: 'Send Inquiry',
       sending: 'Sending...',
       success_title: 'Inquiry Received',
-      success_client: 'Thank you. A consultant from our Client Relations team will review your details and contact you shortly.',
-      success_candidate: 'Thank you. A consultant from our Talent team will review your details and contact you shortly.',
+      success_client: 'Thank you. One of our consultants at PrimeTalent will get back to you as soon as possible.',
+      success_candidate: 'Thank you. One of our consultants at PrimeTalent will get back to you as soon as possible.',
       close: 'Close'
     }
   },
@@ -192,8 +192,8 @@ const translations: Record<Language, Record<string, any>> = {
       send: 'Send Forespørgsel',
       sending: 'Sender...',
       success_title: 'Forespørgsel Modtaget',
-      success_client: 'Tak. En konsulent fra vores klientrelationsteam vil gennemgå dine detaljer og kontakte dig snarest.',
-      success_candidate: 'Tak. En konsulent fra vores talentteam vil gennemgå dine detaljer og kontakte dig snarest.',
+      success_client: 'Tak. En af vores konsulenter fra PrimeTalent vil kontakte dig snarest muligt.',
+      success_candidate: 'Tak. En af vores konsulenter fra PrimeTalent vil kontakte dig snarest muligt.',
       close: 'Luk'
     }
   }
