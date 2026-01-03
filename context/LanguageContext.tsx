@@ -84,9 +84,9 @@ const translations: Record<Language, Record<string, any>> = {
     },
     modal: {
       client_title: 'Partner with PrimeTalent',
-      client_subtitle: 'Tell us about your hiring needs or strategic goals.',
-      candidate_title: 'Join Our Talent Network',
-      candidate_subtitle: 'Submit your interest for trading, quant, or tech roles.',
+      client_subtitle: 'Fill out the form, and we will initiate a no-commitment conversation.',
+      candidate_title: 'Join PrimeTalent’s candidate network',
+      candidate_subtitle: 'Fill out the form, and we will initiate a confidential, no-commitment conversation.',
       name: 'Full Name',
       email: 'Email',
       phone: 'Phone (Optional)',
