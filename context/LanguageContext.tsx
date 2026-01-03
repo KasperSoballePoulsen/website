@@ -11,18 +11,18 @@ interface LanguageContextType {
 const translations: Record<Language, Record<string, any>> = {
   en: {
     nav: {
-      expertise: 'Expertise',
+      focusAreas: 'Focus Areas',
       insights: 'Market Insights',
       candidates: 'Candidates',
       clients: 'Clients',
       about: 'About Us'
     },
     hero: {
-      title_line1: 'Connecting Top',
-      title_line2: 'Energy Talents',
-      title_line3: 'With the Future.',
-      subtitle: 'Whether you are a Trading House seeking quantitative edge or a Trader ready for your next desk, we invite you to start the conversation.',
-      btn_client: 'FOR TRADING HOUSES',
+      title_line1: 'Connecting top',
+      title_line2: 'energy talent',
+      title_line3: 'with the future.',
+      subtitle: 'We connect energy trading companies with candidates who contribute to better decision-making and stronger results. We invite you to start the conversation.',
+      btn_client: 'FOR COMPANIES',
       btn_candidate: 'FOR CANDIDATES'
     },
     stats: {
@@ -31,15 +31,15 @@ const translations: Record<Language, Record<string, any>> = {
       network: 'Talent Network'
     },
     sectors: {
-      category: 'Our Expertise',
-      title: 'Specialized Practice Areas',
-      desc: 'Deep vertical knowledge across the core pillars of the energy trade.',
-      traders_title: 'Energy Traders',
-      traders_desc: 'Power, Gas, LNG, and Oil traders. Originators and Portfolio Managers driving commercial performance.',
-      quant_title: 'Trading Analysts',
-      quant_desc: 'Quantitative Researchers, Data Scientists, and Structurers building the models of tomorrow.',
-      tech_title: 'Software Developers',
-      tech_desc: 'Python/C++ Developers, Algo Engineers, and CTRM Specialists architecting high-performance systems.'
+      category: 'Our Areas of Focus',
+      title: 'Recruitment and headhunting',
+      desc: 'Specialized recruitment and headhunting within the core functions of energy trading.',
+      traders_title: 'Energy traders',
+      traders_desc: 'Profiles that create value through trading in energy markets.',
+      quant_title: 'Trading analysts',
+      quant_desc: 'Analytical profiles that support trading and strengthen decision-making.',
+      tech_title: 'Software developers',
+      tech_desc: 'Technical profiles with experience in systems that support energy trading.'
     },
     insights: {
       category: 'Perspectives',
@@ -54,9 +54,9 @@ const translations: Record<Language, Record<string, any>> = {
     },
     about: {
       category: 'Who We Are',
-      title: 'Based in Aarhus. Connected Globally.',
-      p1: 'PrimeTalent is a boutique executive search firm headquartered in Aarhus, Denmark. We function as a strategic partner to a select group of energy trading houses and technology firms.',
-      p2: 'We believe that in a market defined by volatility and speed, the only true competitive advantage is human capital. Our compact, dedicated team of three partners ensures that every search is handled with the utmost discretion, speed, and industry depth. We don\'t just fill roles; we build the desks that move the market.',
+      title: 'Based in Aarhus. Connected globally.',
+      p1: 'PrimeTalent is a recruitment and headhunting firm based in Aarhus, specializing in the energy sector. We work with energy trading companies to identify and recruit the right profiles for both key and specialist roles.',
+      p2: 'In a market characterized by high complexity, volatility, and rapid decision-making, access to the right capabilities is essential. We work closely with both companies and candidates and approach each recruitment with strong professional standards, discretion, and deep industry insight. Our focus is not only on filling positions, but on ensuring matches that create long-term value for both parties.',
       team_rasmus_role: 'Partner',
       team_rasmus_email: 'Email: rm@primetalent.dk',
       team_rasmus_phone: 'Phone: +45 26 22 21 89',
@@ -69,8 +69,8 @@ const translations: Record<Language, Record<string, any>> = {
     },
     cta: {
       title: 'Partner with PrimeTalent',
-      desc: 'Whether you are a Trading House seeking quantitative edge or a Trader ready for your next desk, we invite you to start the conversation.',
-      btn_client: 'For Trading Houses',
+      desc: 'Whether you are an energy trading company in need of new capabilities, or a candidate with ambitions in energy trading, we invite you to start a conversation.',
+      btn_client: 'For Companies',
       btn_candidate: 'For Candidates'
     },
     footer: {
@@ -93,6 +93,8 @@ const translations: Record<Language, Record<string, any>> = {
       company: 'Company',
       linkedin: 'LinkedIn URL (Optional)',
       message: 'Message',
+      clientMessagePlaceholderText: 'We are looking for a Senior Power Trader...',
+      candidateMessagePlaceholderText: 'I am a Senior Power Trader looking for...',
       send: 'Send Inquiry',
       sending: 'Sending...',
       success_title: 'Inquiry Received',
@@ -103,7 +105,7 @@ const translations: Record<Language, Record<string, any>> = {
   },
   da: {
     nav: {
-      expertise: 'Fokusområder',
+      focusAreas: 'Fokusområder',
       insights: 'Indsigter',
       candidates: 'Kandidater',
       clients: 'Klienter',
@@ -113,8 +115,8 @@ const translations: Record<Language, Record<string, any>> = {
       title_line1: 'Vi forbinder',
       title_line2: 'energi-talenter',
       title_line3: 'med fremtiden',
-      subtitle: 'Vi forbinder energihandelsvirksomheder med kandidater, der bidrager til bedre beslutninger og stærkere resultater.',
-      btn_client: 'FOR HANDELSHUSE',
+      subtitle: 'Vi forbinder energihandelsvirksomheder med kandidater, der bidrager til bedre beslutninger og stærkere resultater. Vi inviterer til en fortrolig dialog.',
+      btn_client: 'FOR VIRKSOMHEDER',
       btn_candidate: 'FOR KANDIDATER'
     },
     stats: {
@@ -146,7 +148,7 @@ const translations: Record<Language, Record<string, any>> = {
     },
     about: {
       category: 'Hvem Vi Er',
-      title: 'Baseret i Aarhus. Forbundet Globalt.',
+      title: 'Baseret i Aarhus. Forbundet globalt.',
       p1: 'PrimeTalent er et rekrutterings- og headhuntingfirma med base i Aarhus, specialiseret i energisektoren. Vi samarbejder med energihandelsvirksomheder om at identificere og rekruttere de rette profiler til både nøgle- og specialistroller.',
       p2: 'I et marked præget af høj kompleksitet, volatilitet og hurtige beslutninger er adgang til de rette kompetencer afgørende. Vi arbejder tæt med både virksomheder og kandidater og håndterer hver rekruttering med høj faglighed, diskretion og dyb brancheindsigt. Vores fokus er ikke kun at besætte stillinger, men at sikre match, der skaber langsigtet værdi for begge parter.',
       team_rasmus_role: 'Partner',
@@ -160,13 +162,13 @@ const translations: Record<Language, Record<string, any>> = {
       team_kasper_phone: 'Mobil: +45 22 63 63 10'
     },
     cta: {
-      title: 'Samarbejd med PrimeTalent',
+      title: 'Samarbejde med PrimeTalent',
       desc: 'Uanset om I er en energihandelsvirksomhed med behov for nye kompetencer, eller en kandidat med ambitioner inden for energihandel, inviterer vi jer til dialog.',
-      btn_client: 'For Handelshuse',
+      btn_client: 'For Virksomheder',
       btn_candidate: 'For Kandidater'
     },
     footer: {
-      desc: 'Vi identificerer top-performere og placerer dem dér, hvor de skaber mest impact.',
+      desc: 'Vi identificerer top-performere og placerer dem dér, hvor de skaber mest værdi.',
       services: 'Ydelser',
       industries: 'Industrier',
       contact_info: 'Kontakt',
@@ -177,14 +179,16 @@ const translations: Record<Language, Record<string, any>> = {
     modal: {
       client_title: 'Bliv samarbejdspartner med PrimeTalent',
       client_subtitle: 'Udfyld formularen – så tager vi en uforpligtende dialog.',
-      candidate_title: 'Tilslut dig vores talentnetværk',
-      candidate_subtitle: 'Indsend din interesse for trading, quant eller tech roller.',
+      candidate_title: 'Bliv en del af PrimeTalents kandidatnetværk',
+      candidate_subtitle: 'Udfyld formularen, så tager vi en uforpligtende og fortrolig dialog.',
       name: 'Fulde Navn',
       email: 'Email',
       phone: 'Mobil (Valgfrit)',
       company: 'Virksomhed',
-      linkedin: 'LinkedIn URL (Valgfrit)',  
+      linkedin: 'LinkedIn URL (Valgfrit)',
       message: 'Besked',
+      clientMessagePlaceholderText: 'Vi søger en erfaren Senior Power Trader...',
+      candidateMessagePlaceholderText: 'Jeg er en erfaren Senior Power Trader som søger...',
       send: 'Send Forespørgsel',
       sending: 'Sender...',
       success_title: 'Forespørgsel Modtaget',

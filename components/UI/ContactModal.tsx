@@ -115,23 +115,23 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, type }) =>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.name')}</label>
-                <input required name="fullName" type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. Jonathan Doe" />
+                <input required name="fullName" type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="Jonathan Doe" />
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.email')}</label>
-                <input required name="email" type="email" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. j.doe@firm.com" />
+                <input required name="email" type="email" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="j.doe@firm.com" />
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.phone')}</label>
-                <input name="phone" type="tel" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. +45 12 34 56 78" />
+                <input name="phone" type="tel" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="+45 12 34 56 78" />
               </div>
 
               {type === 'client' && (
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">{t('modal.company')}</label>
-                  <input required name="company" type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="e.g. Global Energy Trading" />
+                  <input required name="company" type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400" placeholder="Global Energy Trading" />
                 </div>
               )}
 
@@ -149,7 +149,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, type }) =>
                   name="message"
                   rows={3}
                   className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-prime-blue transition-colors bg-transparent placeholder-gray-400 resize-none"
-                  placeholder={type === 'client' ? "We are looking for a Senior Power Trader..." : "I am an Algo Dev with 5 years exp..."}
+                  placeholder={type === 'client' ? t('modal.clientMessagePlaceholderText') : t('modal.candidateMessagePlaceholderText') }
                 ></textarea>
               </div>
 

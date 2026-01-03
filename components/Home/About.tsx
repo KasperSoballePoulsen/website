@@ -12,21 +12,24 @@ const About: React.FC = () => {
       role: t('about.team_rasmus_role'),
       email: t('about.team_rasmus_email'),
       image: 'RasmusProfilePic.jpg',
-      phone: t('about.team_rasmus_phone')
+      phone: t('about.team_rasmus_phone'),
+      linkedIn: "https://www.linkedin.com/in/rasmus-%C3%A6rendahl-mikkelsen-238802227"
     },
     {
       name: 'Malthe Boel',
       role: t('about.team_malthe_role'),
       email: t('about.team_malthe_email'),
       image: 'MaltheProfilePic.jpg',
-      phone: t('about.team_malthe_phone')
+      phone: t('about.team_malthe_phone'),
+      linkedIn: "https://www.linkedin.com/in/malthe-boel-57181534b"
     },
     {
       name: 'Kasper Poulsen',
       role: t('about.team_kasper_role'),
       email: t('about.team_kasper_email'),
       image: 'KasperProfilePic.jpg',
-      phone: t('about.team_kasper_phone')
+      phone: t('about.team_kasper_phone'),
+      linkedIn: "https://www.linkedin.com/in/kasper-s%C3%B8balle-poulsen-56811933b"
     }
   ];
 
@@ -70,7 +73,7 @@ const About: React.FC = () => {
                 {/* <p className="text-gray-500 font-light text-sm leading-relaxed mb-6">
                   {member.bio}
                 </p> */}
-                <a href="#" className="inline-flex items-center text-gray-400 hover:text-blue-600 transition-colors">
+                <a href={member.linkedIn} className="inline-flex items-center text-gray-400 hover:text-blue-600 transition-colors" target="_blank" rel="noopener noreferrer">
                   <Linkedin size={20} />
                 </a>
               </div>
