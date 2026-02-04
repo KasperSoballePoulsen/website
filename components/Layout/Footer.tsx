@@ -14,8 +14,8 @@ const Footer: React.FC = () => {
     : ['Energi Trading', 'Trading Analyse', 'Trading Teknologi'];
 
   const contactInfoList = language === 'en' 
-    ? ['info@primetalent.dk', 'Telefonsmøgen 3, 1st Floor\n8000 Aarhus C, Denmark', 'CVR: 12345678']
-    : ['info@primetalent.dk', 'Telefonsmøgen 3, 1 TV\n8000 Aarhus C, Danmark', 'CVR: 12345678'];
+    ? ['info@primetalent.dk', 'Telefonsmøgen 3, 1st Floor\n8000 Aarhus C, Denmark', 'CVR: 46157508']
+    : ['info@primetalent.dk', 'Telefonsmøgen 3, 1 TV\n8000 Aarhus C, Danmark', 'CVR: 46157508'];
 
   return (
     <footer className="bg-prime-navy text-white pt-20 pb-10">
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
               {t('footer.desc')}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-white hover:text-blue-400 transition"><Linkedin size={20} /></a>
+              <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fprimetalent-aarhus%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEwa2RNZG9DaUM1V0pRT1dnVnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4L3fOq3bdcuRbEgi5IUNbNrQeUvDZKE2PHf7JW5ovoYLAbmgErFThMMnNMtQ_aem_t9wtbm9rAt5mdPolp6BYsw&h=AT161rqcYN17HgkNwvzsb7BCJFNqQSN-JxfaH6PwpOg0MzZ9qPXCPWvBjNAuHA0YabWQ5PM802skxizLBt-k8HFUgaEh0hYSMFMS8o3_GGnOC-DMwHcFQWQsNVqBEkBxiKbNyA0QfztM8RUV5kClNg" className="text-white hover:text-blue-400 transition"><Linkedin size={20} /></a>
             </div>
           </div>
 
